@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="fr.uha.adventure.HomeFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_adventureViewFragment"
+            app:destination="@id/adventureViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adventureViewFragment"
+        android:name="fr.uha.adventure.AdventureViewFragment"
+        android:label="fragment_adventure_view"
+        tools:layout="@layout/fragment_adventure_view" >
+        <action
+            android:id="@+id/action_adventureViewFragment_to_adventureEditFragment"
+            app:destination="@id/adventureEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adventureEditFragment"
+        android:name="fr.uha.adventure.AdventureEditFragment"
+        android:label="fragment_adventure_edit"
+        tools:layout="@layout/fragment_adventure_edit" />
+</navigation>
